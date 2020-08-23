@@ -34,7 +34,7 @@ https://developer.nvidia.com/cuda-10.1-download-archive-update2
 
 ## Downloading Official YOLOv4 Pre-trained Weights
 Our object tracker uses YOLOv4 to make the object detections, which deep sort then uses to track. There exists an official pre-trained YOLOv4 object detector model that is able to detect 80 classes. For easy demo purposes we will use the pre-trained weights for our tracker.
-Download pre-trained yolov4.weights file: 
+Download pre-trained yolov4.weights file: https://drive.google.com/file/d/1r0aHB-dVZb_tTR0NMwFLatAfEp8OmHj-/view?usp=sharing
 
 Extract the file named YOLOTFModel.zip which contains YOLOv4 and YOLOv4-tiny tensorflow weights and model.
 Copy the two folders named yolov4-416 and yolov4-tiny-416 into the directory named checkpoints.
