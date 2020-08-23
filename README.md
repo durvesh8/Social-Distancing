@@ -3,7 +3,8 @@
 Social-Distancing Monitor implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker and use the tracks to identify who are not maintaning a safe distance.
 
 ## Demo of Social Distancing Monitor
-<p align="center"><img src="data/helpers/demo.gif"\></p>
+<p align="center"><img src="outputs/demo.avi"\></p>
+This was tested on NVIDIA GeForce GTX 1050 Ti
 
 ## Getting Started
 To get started, install the proper dependencies either via Anaconda or Pip. I recommend Anaconda route for people using a GPU as it configures CUDA toolkit version for you.
@@ -64,7 +65,6 @@ Social-Distancing
 ...
 ```
 ## Running the Social Distancing monitor using YOLOv4
-To implement the object tracking using YOLOv4, first we convert the .weights into the corresponding TensorFlow model which will be saved to a checkpoints folder. Then all we need to do is run the object_tracker.py script to run our object tracker with YOLOv4, DeepSort and TensorFlow.
 ```bash
 # Run yolov4 deep sort social distancing monitor on video (It will take some time to execute)
 python sociald.py --video ./data/video/test.mp4 --output ./outputs/demo.avi --model yolov4
@@ -94,14 +94,14 @@ As mentioned above, the resulting video will save to wherever you set the ``--ou
   --output: path to output video (remember to set right codec for given format. e.g. XVID for .avi)
     (default: None)
   --output_format: codec used in VideoWriter when saving video to file
-    (default: 'XVID)
+    (default: 'XVID')
   --[no]tiny: yolov4 or yolov4-tiny
     (default: 'false')
   --weights: path to weights file
     (default: './checkpoints/yolov4-416')
   --framework: what framework to use (tf)
     (default: tf)
-  --model: yolov3 or yolov4
+  --model: yolov4
     (default: yolov4)
   --size: resize images to
     (default: 416)
