@@ -3,7 +3,7 @@
 Social-Distancing Monitor implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker and use the tracks to identify who are not maintaning a safe distance.
 
 ## Demo of Social Distancing Monitor
-<p align="center"><img src="outputs/demo.avi"\></p>
+<p align="center"><img src="data/helpers/demo.gif"\></p>
 This was tested on NVIDIA GeForce GTX 1050 Ti
 
 ## Getting Started
