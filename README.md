@@ -2,7 +2,7 @@
 
 Social-Distancing Monitor implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker and use the tracks to identify who are not maintaning a safe distance.
 
-## Demo of Object Tracker on Persons
+## Demo of Social Distancing Monitor
 <p align="center"><img src="data/helpers/demo.gif"\></p>
 
 ## Getting Started
@@ -32,9 +32,9 @@ pip install -r requirements-gpu.txt
 Make sure to use **CUDA Toolkit version 10.1** as it is the proper version for the TensorFlow version used in this repository.
 https://developer.nvidia.com/cuda-10.1-download-archive-update2
 
-## Downloading Official YOLOv4 Pre-trained Weights
+## Downloading YOLOv4 Pre-trained Weights
 Our object tracker uses YOLOv4 to make the object detections, which deep sort then uses to track. There exists an official pre-trained YOLOv4 object detector model that is able to detect 80 classes. For easy demo purposes we will use the pre-trained weights for our tracker.
-Download pre-trained yolov4.weights file: https://drive.google.com/file/d/1r0aHB-dVZb_tTR0NMwFLatAfEp8OmHj-/view?usp=sharing
+Download pre-trained yolov4 and yolov4-tiny tensorflow model: https://drive.google.com/file/d/1r0aHB-dVZb_tTR0NMwFLatAfEp8OmHj-/view?usp=sharing
 
 Extract the file named YOLOTFModel.zip which contains YOLOv4 and YOLOv4-tiny tensorflow weights and model.
 Copy the two folders named yolov4-416 and yolov4-tiny-416 into the directory named checkpoints.
@@ -75,7 +75,7 @@ python sociald.py --video 0 --output ./outputs/webcam.avi --model yolov4
 ```
 The output flag allows you to save the resulting video of the object tracker running so that you can view it again later. Video will be saved to the path that you set. (outputs folder is where it will be if you run the above command!)
 
-## Running the Tracker with YOLOv4-Tiny
+## Running the Social Distancing Monitor with YOLOv4-Tiny
 The following commands will allow you to run yolov4-tiny model. Yolov4-tiny allows you to obtain a higher speed (FPS) for the tracker at a slight cost to accuracy. Make sure that you have downloaded the tiny weights file and added it to the checkpoints folder for this to work!
 ```
 # Run yolov4-tiny object tracker
