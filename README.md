@@ -6,6 +6,8 @@ Social-Distancing Monitor implemented with YOLOv4, DeepSort, and TensorFlow. YOL
 <p align="center"><img src="data/helpers/demo.gif"\></p>
 This was tested on NVIDIA GeForce GTX 1050 Ti
 
+Check the video in outputs/ to see the output in full resolution.
+
 ## Getting Started
 To get started, install the proper dependencies either via Anaconda or Pip. I recommend Anaconda route for people using a GPU as it configures CUDA toolkit version for you.
 
