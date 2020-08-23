@@ -1,6 +1,6 @@
-# yolov4-deepsort
+# Social-Distancing Monitor
 
-Object tracking implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker.
+Social-Distancing Monitor implemented with YOLOv4, DeepSort, and TensorFlow. YOLOv4 is a state of the art algorithm that uses deep convolutional neural networks to perform object detections. We can take the output of YOLOv4 feed these object detections into Deep SORT (Simple Online and Realtime Tracking with a Deep Association Metric) in order to create a highly accurate object tracker and use the tracks to identify who are not maintaning a safe distance.
 
 ## Demo of Object Tracker on Persons
 <p align="center"><img src="data/helpers/demo.gif"\></p>
@@ -78,23 +78,17 @@ The output flag allows you to save the resulting video of the object tracker run
 ## Running the Tracker with YOLOv4-Tiny
 The following commands will allow you to run yolov4-tiny model. Yolov4-tiny allows you to obtain a higher speed (FPS) for the tracker at a slight cost to accuracy. Make sure that you have downloaded the tiny weights file and added it to the checkpoints folder for this to work!
 ```
-# save yolov4-tiny model
-python save_model.py --weights ./data/yolov4-tiny.weights --output ./checkpoints/yolov4-tiny-416 --model yolov4 --tiny
-
 # Run yolov4-tiny object tracker
-python object_tracker.py --weights ./checkpoints/yolov4-tiny-416 --model yolov4 --video ./data/video/test.mp4 --output ./outputs/tiny.avi --tiny
+python sociald.py --weights ./checkpoints/yolov4-tiny-416 --model yolov4 --video ./data/video/test.mp4 --output ./outputs/tiny.avi --tiny
 ```
 
 ## Resulting Video
 As mentioned above, the resulting video will save to wherever you set the ``--output`` command line flag path to. I always set it to save to the 'outputs' folder. You can also change the type of video saved by adjusting the ``--output_format`` flag, by default it is set to AVI codec which is XVID.
 
-Example video showing tracking of all coco dataset classes:
-<p align="center"><img src="data/helpers/all_classes.gif"\></p>
-
 ## Command Line Args Reference
 
 ```bash
- object_tracker.py:
+ sociald.py:
   --video: path to input video (use 0 for webcam)
     (default: './data/video/test.mp4')
   --output: path to output video (remember to set right codec for given format. e.g. XVID for .avi)
@@ -105,7 +99,7 @@ Example video showing tracking of all coco dataset classes:
     (default: 'false')
   --weights: path to weights file
     (default: './checkpoints/yolov4-416')
-  --framework: what framework to use (tf, trt, tflite)
+  --framework: what framework to use (tf)
     (default: tf)
   --model: yolov3 or yolov4
     (default: yolov4)
