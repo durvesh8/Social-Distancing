@@ -119,7 +119,7 @@ As mentioned above, the resulting video will save to wherever you set the ``--ou
 
 ### References  
 
-   Huge shoutout goes to TheAIGuy, hunglc007 and nwojke for creating the backbones of this repository:
+   Huge thanks goes to TheAIGuy, hunglc007 and nwojke for creating the backbones of this repository:
   * [Object tracker using TF, YOLOv4 and DeepSORT](https://github.com/theAIGuysCode/yolov4-deepsort)
   * [tensorflow-yolov4-tflite](https://github.com/hunglc007/tensorflow-yolov4-tflite)
   * [Deep SORT Repository](https://github.com/nwojke/deep_sort)
